@@ -1,7 +1,7 @@
 <?php
 function save()
 {
-include("data.php"); // Includes the configuration for connecting to the database
+include("config.php"); // Includes the configuration for connecting to the database
 extract($_POST); //values frompost array to separate variable
 $sql = "INSERT INTO `form_submission`(`firstname`, `lastname`, `email`, `message`) VALUES ('".$firstname."','".$lastname."','".$email."','".$message."')";//inserting the variables with values into database
 $result = $mysqli->query($sql); // Executes the SQL query and stores the result

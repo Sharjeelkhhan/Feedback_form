@@ -1,12 +1,5 @@
 <?php
-$host = 'localhost';
-$dbname = 'form_submission';
-$username = 'root';
-$password = '';
-
-// Create a new MySQLi object for database connection
-$mysqli = new mysqli($host, $username, $password, $dbname);
-
+include 'client.php';
 // Check if connection was successful
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: " . $mysqli->connect_error;
@@ -44,6 +37,4 @@ if (!$mysqli->query($alterTableQuery)) {
 
 echo "Migration completed successfully.";
 
-// Close the database connection
-$mysqli->close();
 ?>

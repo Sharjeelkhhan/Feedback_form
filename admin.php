@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($adminUsername === "admin" && $adminPassword === "1") {
         
-        include("data.php"); // Includes the configuration for connecting to the database
+        include("config.php"); // Includes the configuration for connecting to the database
 
         $sql = "SELECT * FROM `form_submission`"; // Constructs the SQL query to select all records from the table
         $result = $mysqli->query($sql); // Executes the SQL query and stores the result

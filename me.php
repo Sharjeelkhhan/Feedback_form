@@ -1,12 +1,13 @@
 <?php
 
-class FeedbackForm {
+class Me { //class name
+    //class attributes
     public $firstname;
     public $lastname;
     public $email;
     public $message;
     
-    public function __construct() {
+    public function __construct() {  //constructor
         $this->firstname = $_POST['firstname'] ?? '';
         $this->lastname = $_POST['lastname'] ?? '';
         $this->email = $_POST['email'] ?? '';
@@ -68,7 +69,7 @@ class FeedbackForm {
 }
 
 // Create an instance of the FeedbackForm class
-$form = new FeedbackForm();
+$form = new Me();
 
 // Display the form
 $form->displayForm();
